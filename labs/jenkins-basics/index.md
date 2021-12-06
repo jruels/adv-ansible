@@ -21,11 +21,12 @@ Log into the [Azure Portal](https://portal.azure.com) using credentials provided
 ## 2. Open Cloud Shell
 1. If you already have a Cloud Shell session open, you can skip to the next section.
 2. Open Cloud Shell.
-![](index/portal-cloud-shell.png)
+![](index/portal-cloud-shell%202.png)
 
 3. If you haven't previously used Cloud Shell, configure the environment and storage settings.
 4. Select `Bash`
-![](index/choose-cloudshell-cli.png)
+
+![](index/choose-cloudshell-cli%202.png)
 
 ## 3. Create a virtual machine
 1. Create a test directory called `jenkins-get-started`.
@@ -33,7 +34,7 @@ Log into the [Azure Portal](https://portal.azure.com) using credentials provided
 3. Create a file named `cloud-init-jenkins.txt`.
 4. Paste the following code into the new file:
 
-```json
+```
 #cloud-config
 package_upgrade: true
 runcmd:
@@ -43,6 +44,7 @@ runcmd:
   - sudo apt-get update && sudo apt-get install jenkins -y
   - sudo service jenkins restart
 ```
+
 
 		5. Run `az group create` to create a resource group.
 
@@ -120,55 +122,55 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 5. Using the IP address, open the following URL in a browser: `http://<ip_address>:8080`
 
 6. Enter the password you retrieved earlier and select **Continue**.
-![](index/unlock-jenkins.png)
+![](index/unlock-jenkins%202.png)
 
 7. Select **Select plug-in to install**.
 
-![](index/select-plugins.png)
+![](index/select-plugins%202.png)
 
 8. In the filter box at the top of the page, enter `github`. Select the GitHub plug-in and select **Install**.
 
-    ![](index/install-github-plugin.png)
+    ![](index/install-github-plugin%202.png)
 
 9. Enter the information for the first admin user and select **Save and Continue**.
 
-![](index/create-first-user.png)
+![](index/create-first-user%202.png)
 
 10. On the **Instance Configuration** page, select **Save and Finish**.
 
-![](index/instance-configuration.png)
+![](index/instance-configuration%202.png)
 
 11. Select **Start using Jenkins**.
-  ![](index/start-using-jenkins.png)
+  ![](index/start-using-jenkins%202.png)
 
 ## 5. Create your first job
 
 1. On the Jenkins home page, select **Create a job**.
 
-![](index/CD434BF6-2C19-4F4A-AEFE-C7592362AE14.png)
+![](index/CD434BF6-2C19-4F4A-AEFE-C7592362AE14%202.png)
 
 2. Enter a job name of `mySampleApp`, select **Freestyle project**, and select **OK**.
- ![](index/new-job.png)
+ ![](index/new-job%202.png)
 
 3. Select the **Source Code Management** tab. Enable **Git** and enter the following URL for the **Repository URL** value: `https://github.com/spring-guides/gs-spring-boot.git`. Then change the **Branch Specifier** to `*/main`.
 
-![](index/source-code-management.png)
+![](index/source-code-management%202.png)
 
 4. Select the **Build** tab, then select **Add build step**
 
-![](index/add-build-step.png)
+![](index/add-build-step%202.png)
 
 5. From the drop-down menu, select **Invoke Gradle script**.
 
-![](index/invoke-gradle-script-option.png)
+![](index/invoke-gradle-script-option%202.png)
 
 6. Select **Use Gradle Wrapper**, then enter `complete` in **Wrapper location** and `build` for **Tasks**.
 
-![](index/gradle-script-options.png)
+![](index/gradle-script-options%202.png)
 
 7. Select **Advanced** and enter `complete` in the **Root Build script** field.
 
-![](index/root-build-script.png)
+![](index/root-build-script%202.png)
 
 8. Scroll to the bottom of the page, and select **Save**.
 
@@ -176,28 +178,28 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 1. When the home page for your project displays, select **Build Now** to compile the code and package the sample app.
 
-![](index/project-home-page.png)
+![](index/project-home-page%202.png)
 
 2. A graphic below the **Build History** heading indicates that the job is being built.
 
-  ![](index/job-currently-building.png)
+  ![](index/job-currently-building%202.png)
 
 3. When the build completes, select the **Workspace** link.
 
-![](index/job-workspace.png)
+![](index/job-workspace%202.png)
 
 4. Navigate to `complete/build/libs` to see that the `.jar` file was successfully built.
 
- ![](index/successful-build.png)
+ ![](index/successful-build%202.png)
 
 5. You can also confirm the build was successful by viewing the console output. 
 	1. Click the icon on the left of the build job ID
 	
-![](index/jenkins-console.jpg)
+![](index/jenkins-console%202.jpg)
 
 	2. The console output will show if the build was successful. 
 	
-![](index/console-success.jpg)
+![](index/console-success%202.jpg)
 
 
 6. Your Jenkins server is now ready to build your own projects in Azure!
