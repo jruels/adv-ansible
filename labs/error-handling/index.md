@@ -7,12 +7,11 @@ If the report is collected, the playbook should write and edit the file to repla
 
 Task list: 
 
-* Generate an SSH key pair and configure Ansible to connect using passwordless authentication.
 * Create a playbook, `/home/ubuntu/report.yml` that runs against `localhost`.
 * Configure the playbook to use the `get_url` module to download https://bit.ly/3Ey2w8Q to `/home/ubuntu/transaction_list` on `localhost` and output "File downloaded." to `stdout`.
 * Configure the playbook to handle connection failure by outputting "Site appears to be down. Try again later." to `stdout`.
 * Configure the playbook to output "Attempt Completed" to stdout, whether it was successful or not.
-* Configure the playbook to replace all instances of `#BLANKLINE` with the line break character `\n`.
+* Configure the playbook to replace all instances of `#BLANKLINE` with the line break character `\n`
 * Run the playbook using the default inventory to verify whether things work or not.
 
 After confirming the playbook successfully downloads and updates the `transaction_list` file, run the `break_stuff.yml` playbook in the `maint` directory to simulate an unreachable host. 
