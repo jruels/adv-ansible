@@ -131,7 +131,7 @@ Select **Select plug-in to install**.
 
 In the filter box at the top of the page, enter `github`. Select the GitHub plug-in and select **Install**.
 
-    ![](index/install-github-plugin%202.png)
+    ![](index/install-github-plugin.png)
 
 Enter the information for the first admin user and select **Save and Continue**.
 
@@ -194,11 +194,12 @@ Navigate to `complete/build/libs` to see that the `.jar` file was successfully b
  ![](index/successful-build%202.png)
 
 You can also confirm the build was successful by viewing the console output. 
-	* Click the icon on the left of the build job ID
+
+* Click the icon on the left of the build job ID
 	
 ![](index/jenkins-console%202.jpg)
 
-	* The console output will show if the build was successful. 
+* The console output will show if the build was successful. 
 	
 ![](index/console-success%202.jpg)
 
