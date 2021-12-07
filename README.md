@@ -1,12 +1,15 @@
 # Advanced Ansible
 
-This site includes the slides and labs for the Advanced Ansible class.
+This site includes the slides and labs for the Advanced Ansible class.   
 
 
 ## Course Content   
-[Slides day 1](https://www.dropbox.com/s/rzq7yslur4cvfer/Packer%20and%20Terraform-day1.pdf?dl=0)   
-[Slides day 2](https://www.dropbox.com/s/mo3rrhu8bejyn4y/Packer%20and%20Terraform-day2.pdf?dl=0)   
+Slides were emailed to each student. 
 
-## Labs
-### Day 1   
+## Labs   
+[Lab VMs](https://docs.google.com/spreadsheets/d/1hqMfSpDqjohHlOX_bwkYhIvntLVW6E8ktLa3uQLHL7k/edit?usp=sharing)   
+[Access Lab](labs/access_lab/)   
+
+### Day 1      
 Lab 1: [Deploy Jenkins on Azure](labs/jenkins-basics/)   
+Lab 2: [Ansible Error Handling](labs/error-handling/)   
