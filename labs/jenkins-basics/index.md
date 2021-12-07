@@ -131,7 +131,7 @@ Select **Select plug-in to install**.
 
 In the filter box at the top of the page, enter `github`. Select the GitHub plug-in and select **Install**.
 
-    ![](index/install-github-plugin.png)
+![](index/install-github-plugin.png)
 
 Enter the information for the first admin user and select **Save and Continue**.
 
