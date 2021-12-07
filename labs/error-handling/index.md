@@ -15,11 +15,11 @@ Task list:
 * Configure the playbook to replace all instances of `#BLANKLINE` with the line break character `\n`.
 * Run the playbook using the default inventory to verify whether things work or not.
 
-After confirming the playbook successfully downloads and updates the `transaction_list` file, run the `break_stuff.yml` playbook to simulate an unreachable host. 
+After confirming the playbook successfully downloads and updates the `transaction_list` file, run the `break_stuff.yml` playbook in the `maint` directory to simulate an unreachable host. 
 
 
 ```sh
-ansible-playbook -b break_stuff.yml --tags service_down
+ansible-playbook maint/break_stuff.yml --tags service_down
 ```
 
 Confirm the host is no longer reachable 
