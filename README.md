@@ -13,3 +13,6 @@ Slides were emailed to each student.
 ### Day 1      
 Lab 1: [Deploy Jenkins on Azure](labs/jenkins-basics/)   
 Lab 2: [Ansible Error Handling](labs/error-handling/)   
+
+## Day 2   
+Lab 3: [Ansible Vault](labs/ansible-vault/)   
