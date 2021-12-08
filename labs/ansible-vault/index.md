@@ -1,9 +1,10 @@
 # Ansible Vault
+
 ## Scenario
 
 There are a number of features unique to Ansible playbooks which provide robust functionality. This exercise explores many of these features in a practical scenario of deploying a web server. Most notably, this exercise deals with confidential data in an Ansible vault and working with tags in Ansible playbooks.
 
-
+## Tasks
 Start by creating an inventory file with a `webservers` group consisting of the VMs from the provided spreadsheet.
 
 You must create a modular playbook used for webserver management. 
@@ -25,7 +26,12 @@ On the host group `webservers`:
    - `vhost` for virtual host deployment
    - `data-job` to execute the asynchronous data job.
 
-
+## Test
+Confirm the following: 
+* Playbook execution prompts for vault password
+* Playbook completes successfully
+* `/opt/data-job.sh` is running on both nodes
+* Apache returns a `401 Unauthorized` status
 
 ## Congrats!
 
