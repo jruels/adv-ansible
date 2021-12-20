@@ -320,7 +320,7 @@ Here is a sample of what that might look like:
   tasks:
     - name: Create a GitHub Repo
       github_repo:
-        github_auth_key: {%raw%}"{{github_token}}"{%endraw%}
+        github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
         name: "Hello-World"
         description: "First repo created with custom Ansible module"
         private: yes
@@ -338,7 +338,7 @@ Update the playbook with the following task to delete the repository. Remember t
 ```yml
     - name: Delete GitHub Repo
       github_repo:
-        github_auth_key: {%raw}"{{github_token}}"{%endraw%}
+        github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
         username: "jruels"
         name: "Hello-World"
         state: absent
