@@ -8,7 +8,7 @@ Ansible modules are reusable, standalone scripts that can be used by the Ansible
 
 Often times custom modules are a nice way to interact more fluently with services that provide a RESTful API. For example GitHub or Pivotal. You can, of course, interact with these services with the URI module, but it can be more complicated.
 
-##Prerequisites
+## Prerequisites
 
 ### Create a GitHub account
 Create a free GitHub account if you do not already have one.
