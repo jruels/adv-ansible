@@ -16,3 +16,4 @@ Lab 2: [Ansible Error Handling](labs/error-handling/)
 
 ## Day 2   
 Lab 3: [Ansible Vault](labs/ansible-vault/)   
+Lab 4: [Write a custom module](labs/gh_module/)   
