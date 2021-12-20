@@ -154,8 +154,8 @@ Update the playbook with some more fields:
 - name: Create a github Repo
       github_repo:
         github_auth_key: "..."
-        name: "Hello-World",
-        description: "This is your first repository",
+        name: "Hello-World"
+        description: "This is your first repository"
         private: yes
         has_issues: no
         has_wiki: no
