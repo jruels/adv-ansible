@@ -117,13 +117,14 @@ localhost                  : ok=3    changed=0    unreachable=0    failed=0
 
 It worked! Now that we know the module works we can add code to create/delete GitHub repositories. 
 
-Update the module to handle input so we can create a GitHub repo. 
+Update the `main` function to handle input so we can create a GitHub repo. 
 
 ```python
 def main():
 
     fields = {
         "github_auth_key": {"required": True, "type": "str"},
+        "username": {"required": True, "type": "str"},
         "name": {"required": True, "type": "str"},
         "description": {"required": False, "type": "str"},
         "private": {"default": False, "type": "bool"},
@@ -138,7 +139,7 @@ def main():
     }
 
     module = AnsibleModule(argument_spec=fields)
-	  module.exit_json(changed=False, meta=module.params)
+    module.exit_json(changed=False, meta=module.params)
 ```
 
 **Notes** 
@@ -201,7 +202,7 @@ EXAMPLES = '''
 ```
 
 
-Now update the module with function to create a GitHub repository
+Now update the module with a function to create a GitHub repository
 
 ```python
 from ansible.module_utils.basic import *
@@ -316,11 +317,12 @@ Here is a sample of what that might look like:
 ```yml
 - hosts: localhost
   vars:
-    - github_token: "<YOUR TOKEN HERE>"
+    - github_token: "YOUR TOKEN HERE"
   tasks:
     - name: Create a GitHub Repo
-      github_repo:
-        github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
+      gh_repo:
+        github_auth_key: "{{github_token}}"
+        username: "YOUR GITHUB USERNAME HERE"
         name: "Hello-World"
         description: "First repo created with custom Ansible module"
         private: yes
@@ -339,7 +341,7 @@ Update the playbook with the following task to delete the repository. Remember t
     - name: Delete GitHub Repo
       github_repo:
         github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
-        username: "jruels"
+        username: "YOUR GITHUB USERNAME HERE"
         name: "Hello-World"
         state: absent
 ```
