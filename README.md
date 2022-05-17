@@ -1,6 +1,6 @@
 # Advanced Ansible
 
-This site includes the slides and labs for the Advanced Ansible class.   
+This site includes the labs for the Advanced Ansible class.   
 
 
 ## Course Content   
@@ -11,7 +11,7 @@ Slides were emailed to each student.
 [Access Lab](labs/access_lab/)   
 
 ### Day 1      
-Lab 1: [Deploy Jenkins on Azure](labs/jenkins-basics/)   
+Lab 1: [Deploy Jenkins](labs/jenkins-basics/)   
 Lab 2: [Ansible Error Handling](labs/error-handling/)   
 
 ## Day 2   
