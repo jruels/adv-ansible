@@ -39,6 +39,8 @@ In the searchbar at the top of the page type Jenkins
 Select the result with the tagline "Google Click to Deploy - Virtual machines" as shown in the screenshot   
 ![](index/marketplace_jenkins.png)   
 
+If prompted, enable requested APIs.
+
 On the new page click "Launch" and accept the default options.   
 
 Click "Deploy" at the bottom of the page.   
