@@ -1,6 +1,6 @@
 # Jenkins basics
 
-# Install Jenkins on an Azure Linux VM
+# Install Jenkins 
 
 This article shows how to install [Jenkins](https://jenkins.io) in a cloud environment.
 
@@ -124,6 +124,6 @@ You can also confirm the build was successful by viewing the console output.
 ![](index/console-success%202.jpg)
 
 
-Your Jenkins server is now ready to build your own projects in Azure!
+Your Jenkins server is now ready to build your own projects!
 
 ## Congrats!
