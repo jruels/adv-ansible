@@ -41,9 +41,11 @@ Select the result with the tagline "Google Click to Deploy - Virtual machines" a
 
 If prompted, enable requested APIs.
 
-On the new page click "Launch" and accept the default options.   
+On the new page change region to **us-west1-b**   
 
-Click "Deploy" at the bottom of the page.   
+Click "Launch".   
+
+At the bottom of the page check "I Accept the GCP Marketplace terms" and Click "Deploy".   
 
 After the deployment is complete you will see access information on the right side of the screen.    
 ![](index/jenkins_info.png)   
