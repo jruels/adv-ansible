@@ -18,7 +18,8 @@ On the host group `webservers`:
 * Start and enable `httpd`.
 * Configure virtual host using the provided templates in `conf` directory:
   * `vhost.conf.j2`
-  * `htpasswd.j2` **NOTE:** The template references a variable defined in `conf/confidential` which must be included as a variable file in your playbook
+  * `htpasswd.j2`   
+  **NOTE:** The template references a variable defined in `conf/confidential` which must be included as a variable file in your playbook   
 * Use ansible vault to secure `conf/confidential` with password "I love ansible".
 * Copy `bin/data-job.sh` to `/opt/data-job.sh` on each node in webservers and run asynchronously, without polling for status.
 * Create tags for the following tasks: 
