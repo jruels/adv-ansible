@@ -13,9 +13,9 @@ Create a playbook called `/home/ubuntu/webserver.yml` that meets the following r
 
 On the host group `webservers`:
 
-* Deploy `httpd`.
+* Deploy `apache2`.
 * You can assume all necessary firewall rules have been deployed.
-* Start and enable `httpd`.
+* Start and enable `apache2`.
 * Configure virtual host using the provided templates in `conf` directory:
   * `vhost.conf.j2`
   * `htpasswd.j2`   
@@ -23,7 +23,7 @@ On the host group `webservers`:
 * Use ansible vault to secure `conf/confidential` with password "I love ansible".
 * Copy `bin/data-job.sh` to `/opt/data-job.sh` on each node in webservers and run asynchronously, without polling for status.
 * Create tags for the following tasks: 
-   - `base-install` for `httpd` installation and service configuration.
+   - `base-install` for `apache` installation and service configuration.
    - `vhost` for virtual host deployment
    - `data-job` to execute the asynchronous data job.
 
@@ -32,7 +32,6 @@ Confirm the following:
 * Playbook execution prompts for vault password
 * Playbook completes successfully
 * `/opt/data-job.sh` is running on both nodes
-* Apache returns a `401 Unauthorized` status
 
 ## Congrats!
 
