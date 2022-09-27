@@ -25,7 +25,7 @@ Once logged into the portal, open the cloud shell by clicking the icon to the ri
 
 If prompted, choose `bash` as the shell
 
-Clean up any lefover files
+Clean up any leftover files
 ```
 rm -rf * 
 ```
