@@ -7,18 +7,17 @@ If you have not already, log into the [Azure Portal](https://portal.azure.com) w
 | Student1       	| student1                          	| IstioTraining$ 	|
 | Student2       	| student2                          	| IstioTraining$ 	|
 | Student3       	| student3                          	| IstioTraining$ 	|
-| Student4       	| student4                          	| IstioTraining$ 	|
-| Student5       	| student5                          	| IstioTraining$ 	|
-| Student6       	| student6                          	| IstioTraining$ 	|
-| Student7       	| student7                          	| IstioTraining$ 	|
-| Student8       	| student8                          	| IstioTraining$ 	|
-| Student9       	| student9                          	| IstioTraining$ 	|
-| Student10      	| student10                         	| IstioTraining$ 	|
-| Student11      	| student11                         	| IstioTraining$ 	|
-| Student12      	| student12                         	| IstioTraining$ 	|
-| Student13      	| azstudent1                        	| AzureTraining$ 	|
-| Student14      	| azstudent2                        	| AzureTraining$ 	|
-| Student15      	| azstudent4                        	| AzureTraining$ 	|
+| Student4       	| student5                          	| IstioTraining$ 	|
+| Student5       	| student6                          	| IstioTraining$ 	|
+| Student6       	| student7                          	| IstioTraining$ 	|
+| Student7       	| student8                          	| IstioTraining$ 	|
+| Student8       	| student9                          	| IstioTraining$ 	|
+| Student9       	| student10                         	| IstioTraining$ 	|
+| Student10      	| student11                         	| IstioTraining$ 	|
+| Student11      	| student12                         	| IstioTraining$ 	|
+| Student12      	| student15                         	| IstioTraining$ 	|
+| Student13      	| student16                         	| IstioTraining$ 	|
+| Student14      	| azstudent1                        	| AzureTraining$ 	|
 
 
 Once logged into the portal, open the cloud shell by clicking the icon to the right of the search bar.
@@ -43,21 +42,20 @@ Log in to the control node
 
 | Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
 |----------------	|----------------	|-----------------	|----------------	|
-| Student1       	| 18.144.164.62  	| 54.219.91.156   	| 54.177.133.154 	|
-| Student2       	| 52.53.175.36   	| 50.18.146.59    	| 54.151.89.189  	|
-| Student3       	| 54.183.182.8   	| 18.144.101.204  	| 3.101.42.182   	|
-| Student4       	| 13.52.98.58    	| 54.67.14.196    	| 54.67.103.210  	|
-| Student5       	| 54.219.221.29  	| 18.144.1.102    	| 54.151.105.63  	|
-| Student6       	| 54.183.198.35  	| 54.177.157.228  	| 18.144.177.178 	|
-| Student7       	| 52.53.223.234  	| 204.236.142.129 	| 13.52.237.114  	|
-| Student8       	| 13.52.61.41    	| 54.177.66.73    	| 13.52.220.238  	|
-| Student9       	| 54.193.140.222 	| 54.183.209.166  	| 54.215.120.77  	|
-| Student10      	| 184.169.207.20 	| 54.67.45.166    	| 54.241.220.54  	|
-| Student11      	| 18.144.169.84  	| 54.183.61.126   	| 52.53.166.91   	|
-| Student12      	| 50.18.128.9    	| 54.176.4.185    	| 18.144.27.140  	|
-| Student13      	| 52.53.251.180  	| 54.193.126.138  	| 50.18.8.100    	|
-| Student14      	| 52.53.230.207  	| 54.183.195.216  	| 54.241.176.232 	|
-| Student15      	| 52.53.186.243  	| 18.144.8.17     	| 54.219.207.107 	|
+| Student1       	| 54.215.233.207  	| 54.176.171.27   	| 13.57.253.28 	    |
+| Student2       	| 54.193.250.48  	| 54.153.87.135    	| 54.183.225.102  	|
+| Student3       	| 54.151.19.99  	| 54.241.144.167  	| 54.177.61.125   	|
+| Student4       	| 54.215.195.230    | 54.183.161.73    	| 54.176.41.15  	|
+| Student5       	| 54.67.94.175  	| 50.18.231.115    	| 54.153.82.82  	|
+| Student6       	| 52.53.149.43  	| 13.52.243.222  	| 54.153.28.18  	|
+| Student7       	| 54.153.2.102 	    | 54.67.71.196 	    | 18.144.170.10  	|
+| Student8       	| 54.219.125.131   	| 54.183.182.130    | 13.56.213.116  	|
+| Student9       	| 3.101.21.236 	    | 54.215.242.149  	| 54.153.105.27  	|
+| Student10      	| 54.153.43.12 	    | 52.53.151.127    	| 54.215.235.241  	|
+| Student11      	| 52.53.235.223  	| 54.177.221.50   	| 13.52.103.225   	|
+| Student12      	| 54.177.152.183   	| 54.215.86.42    	| 52.53.151.86  	|
+| Student13      	| 3.101.42.55 	    | 54.177.200.222  	| 54.241.100.224    |
+| Student14      	| 54.183.186.180  	| 54.176.10.32  	| 54.241.217.145 	|
 
 The username for SSH is `ubuntu`   
 
@@ -65,3 +63,142 @@ The username for SSH is `ubuntu`
 ```
 ssh -i adv-ansible/keys/lab.pem ubuntu@<Control server IP> 
 ```
+
+## Configure the `ansible` user on all the nodes
+
+Next, we'll add a new `ansible` user to each node. This user will be used for running `ansible` tasks. 
+
+On each node run:
+```
+sudo useradd ansible
+```
+
+Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
+
+**Note:** Do not use a passphrase for the key pair.
+
+Create a key pair for the `ansible` user on the control host, accepting the defaults when prompted:
+
+```
+sudo su - ansible
+ssh-keygen 
+```
+
+
+
+Copy the public key to both nodes provided by the instructor:
+
+On the Control Node copy the output of:
+
+```
+cat /home/ansible/.ssh/id_rsa.pub
+```
+
+Log in to each of the managed nodes, become the `ansible` user, and add the key to the `authorized_keys` file.
+
+
+Become the `ansible` user:
+
+```
+sudo su - ansible 
+```
+
+Use `ssh-keygen`, accepting defaults, to create the `.ssh` directory
+
+```
+ssh-keygen
+```
+
+Now create the `authorized_keys` file and paste the copied output from above into it.
+
+```
+echo "<copied output from above>" > /home/ansible/.ssh/authorized_keys
+```
+
+Set the correct permissions
+
+```
+chmod 600 /home/ansible/.ssh/authorized_keys
+```
+
+Confirm you can ssh as the `ansible` user from the control node to the managed nodes
+
+```
+ssh <IP of each node>
+```
+
+
+
+## Create a Simple Ansible Inventory
+
+Create and enter a working directory
+
+```
+mkdir /home/ansible/lab-setup && cd /home/ansible/lab-setup
+```
+
+Next, we'll create a simple Ansible inventory on the control node in `/home/ansible/lab-setup/inventory` containing `node1` and `node2`.
+
+On the control host:
+
+Enter the working directory
+```
+cd /home/ansible/lab-setup
+```
+```
+touch inventory 
+echo "node1 ansible_host=<IP of node1>" >> inventory 
+echo "node2 ansible_host=<IP of node2>" >> inventory 
+```
+
+
+
+## Configure `sudo` Access for Ansible
+
+Now, we'll configure sudo access for Ansible on `node1` and `node2` such that Ansible may use sudo for any command with no password prompt.
+
+Log in to each node and edit the `sudoers` file to contain appropriate access for the `ansible` user:
+
+```
+sudo visudo 
+```
+
+Add the following line to the file and save:
+
+```
+ansible    ALL=(ALL)       NOPASSWD: ALL 
+```
+
+Enter:
+
+```
+exit
+```
+
+## Verify Each Managed Node Is Accessible
+
+Finally, we'll verify each managed node is able to be accessed by Ansible from the control node using the `ping` module.
+
+Redirect the output of a successful command to `/home/ansible/lab-setup/output`.
+
+To verify each node, run the following as the `ansible` user from the control host:
+
+Enter the working directory:
+```
+cd /home/ansible/lab-setup
+```
+
+```
+ansible -i inventory node1 -m ping 
+ansible -i inventory node2 -m ping 
+```
+
+To redirect output of a successful command to `/home/ansible/lab-setup/output`:
+
+```
+ansible -i inventory node1 -m ping > output 
+```
+
+## Conclusion
+
+Congratulations on completing this lab!

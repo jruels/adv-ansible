@@ -7,7 +7,6 @@ This site includes the labs for the Advanced Ansible class.
 Slides were emailed to each student. 
 
 ## Labs   
-[Lab VMs](https://docs.google.com/spreadsheets/d/1hqMfSpDqjohHlOX_bwkYhIvntLVW6E8ktLa3uQLHL7k/edit?usp=sharing)   
 [Access Lab](labs/access_lab/)   
 
 ### Day 1      
