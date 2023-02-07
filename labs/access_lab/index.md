@@ -15,8 +15,8 @@ If you have not already, log into the [Azure Portal](https://portal.azure.com) w
 | Student9       	| student10                         	| IstioTraining$ 	|
 | Student10      	| student11                         	| IstioTraining$ 	|
 | Student11      	| student12                         	| IstioTraining$ 	|
-| Student12      	| student15                         	| IstioTraining$ 	|
-| Student13      	| student16                         	| IstioTraining$ 	|
+| Student12      	| student15                         	| AzureTraining$ 	|
+| Student13      	| student16                         	| AzureTraining$ 	|
 | Student14      	| azstudent1                        	| AzureTraining$ 	|
 
 
