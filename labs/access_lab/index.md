@@ -70,7 +70,7 @@ Next, we'll add a new `ansible` user to each node. This user will be used for ru
 
 On each node run:
 ```
-sudo useradd ansible
+sudo useradd -m -s /bin/bash ansible
 ```
 
 Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
@@ -131,6 +131,7 @@ ssh <IP of each node>
 
 ## Create a Simple Ansible Inventory
 
+Run the following on the CONTROL NODE   
 Create and enter a working directory
 
 ```
