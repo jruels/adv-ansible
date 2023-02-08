@@ -9,14 +9,19 @@ Start by creating an inventory file with a `webservers` group consisting of the 
 
 You must create a modular playbook used for webserver management. 
 
-Create a playbook called `/home/ubuntu/webserver.yml` that meets the following requirements:
+As the `ansible` user, create a working directory:
+```
+mkdir /home/ansible/lab-vault && cd /home/ansible/lab-vault
+```
+
+Create a playbook called `webserver.yml` that meets the following requirements:
 
 On the host group `webservers`:
 
 * Deploy `apache2`.
 * You can assume all necessary firewall rules have been deployed.
 * Start and enable `apache2`.
-* Configure virtual host using the provided templates in `conf` directory:
+* Configure virtual host using the provided templates in the `~/adv-ansible/labs/ansible-vault/conf` directory:
   * `vhost.conf.j2`
   * `htpasswd.j2`   
   **NOTE:** The template references a variable defined in `conf/confidential` which must be included as a variable file in your playbook   
