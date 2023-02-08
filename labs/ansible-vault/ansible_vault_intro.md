@@ -137,6 +137,16 @@ Add the following text to `webserver.yml` just **before** the handler section:
       notify: httpd service
       tags:
         - base-install
+    - name: create apache config directory
+      file:
+         path: "/etc/httpd/conf.d"
+         state: directory
+         mode: '0755'
+    - name: create another directory
+      file:
+         path: "/etc/httpd/conf"
+         state: directory
+         mode: '0755'
     - name: configure virtual host
       template:
         src: /home/ansible/adv-ansible/labs/ansible-vault/conf/vhost.conf.j2
