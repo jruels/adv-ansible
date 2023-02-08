@@ -56,8 +56,8 @@ Create the file `/home/ansible/lab-vault/webserver.yml` and add the following co
     - /home/ansible/adv-ansible/labs/ansible-vault/conf/confidential
   tasks:
     - name: install httpd
-      yum:
-        name: httpd
+      apt:
+        name: apache2
         state: latest
       notify: httpd service
       tags:
@@ -65,7 +65,7 @@ Create the file `/home/ansible/lab-vault/webserver.yml` and add the following co
   handlers:
     - name: Restart and enable httpd
       service:
-        name: httpd
+        name: apache2
         state: restarted
         enabled: yes
       listen: httpd service
@@ -131,8 +131,8 @@ Add the following text to `webserver.yml` just **before** the handler section:
     - /home/ansible/adv-ansible/labs/ansible-vault/conf/confidential
   tasks:
     - name: install httpd
-      yum:
-        name: httpd
+      apt:
+        name: apache2
         state: latest
       notify: httpd service
       tags:
@@ -165,7 +165,7 @@ Add the following text to `webserver.yml` just **before** the handler section:
   handlers:
     - name: Restart and enable httpd
       service:
-        name: httpd
+        name: apache2
         state: restarted
         enabled: yes
       listen: httpd service
