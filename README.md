@@ -1,6 +1,6 @@
 # Advanced Ansible
 
-This site includes the labs for the Advanced Ansible class.   
+This site includes the labs for the Advanced Ansible class.    
 
 
 ## Course Content   
@@ -14,5 +14,6 @@ Lab 1: [Deploy Jenkins](labs/jenkins-basics/)
 Lab 2: [Ansible Error Handling](labs/error-handling/)     
 
 ## Day 2   
-Lab 3: [Ansible Vault](labs/ansible-vault/)   
-Lab 4: [Write a custom module](labs/gh_module/)   
+Lab 3: [Ansible Templates](labs/templates/)   
+Lab 4: [Ansible Vault](labs/ansible-vault/)   
+Lab 5: [Write a custom module](labs/gh_module/)   
