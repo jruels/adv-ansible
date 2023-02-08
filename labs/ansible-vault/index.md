@@ -14,6 +14,12 @@ As the `ansible` user, create a working directory:
 mkdir /home/ansible/lab-vault && cd /home/ansible/lab-vault
 ```
 
+if you have not already done so, clone the lab repository
+```
+cd /home/ansible
+git clone https://github.com/jruels/adv-ansible.git
+```
+
 Create a playbook called `webserver.yml` that meets the following requirements:
 
 On the host group `webservers`:
@@ -21,7 +27,7 @@ On the host group `webservers`:
 * Deploy `apache2`.
 * You can assume all necessary firewall rules have been deployed.
 * Start and enable `apache2`.
-* Configure virtual host using the provided templates in the `~/adv-ansible/labs/ansible-vault/conf` directory:
+* Configure virtual host using the provided templates in the `/home/ansible/adv-ansible/labs/ansible-vault/conf` directory:
   * `vhost.conf.j2`
   * `htpasswd.j2`   
   **NOTE:** The template references a variable defined in `conf/confidential` which must be included as a variable file in your playbook   
