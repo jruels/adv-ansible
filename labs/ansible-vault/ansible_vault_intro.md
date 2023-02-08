@@ -15,10 +15,11 @@ Log in to the control node and sudo to the `ansible` user.
 
 Before we begin, we need to pull the latest changes from our lab repo.
 
-cd into the lab repo directory and pull updates.
+If not already done, clone the repository
 
 ```
-cd ~/adv-ansible && git pull
+cd /home/ansible
+git clone https://github.com/jruels/adv-ansible.git
 ```
 
 
