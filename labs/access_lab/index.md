@@ -17,7 +17,7 @@ If you have not already, log into the [Azure Portal](https://portal.azure.com) w
 | Madhu Lingam             | student12                         | IstioTraining$ |
 | Noel Marcelino           | student16                         | AzureTraining$ |
 | Austin Pasker            | azstudent1                        | AzureTraining$ |
-| OPEN                     |                                   | AzureTraining$ |
+| Instructor               | azstudent2                        | AzureTraining$ |
 
 
 Once logged into the portal, open the cloud shell by clicking the icon to the right of the search bar.
