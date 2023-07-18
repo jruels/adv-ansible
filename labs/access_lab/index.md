@@ -2,22 +2,22 @@
 ## Azure Portal
 If you have not already, log into the [Azure Portal](https://portal.azure.com) with the credentials provided below. 
 
-| Student Number 	| student#@innovationinsoftware.com 	| Password       	|
-|----------------	|-----------------------------------	|----------------	|
-| Student1       	| student1                          	| IstioTraining$ 	|
-| Student2       	| student2                          	| IstioTraining$ 	|
-| Student3       	| student3                          	| IstioTraining$ 	|
-| Student4       	| student5                          	| IstioTraining$ 	|
-| Student5       	| student6                          	| IstioTraining$ 	|
-| Student6       	| student7                          	| IstioTraining$ 	|
-| Student7       	| student8                          	| IstioTraining$ 	|
-| Student8       	| student9                          	| IstioTraining$ 	|
-| Student9       	| student10                         	| IstioTraining$ 	|
-| Student10      	| student11                         	| IstioTraining$ 	|
-| Student11      	| student12                         	| IstioTraining$ 	|
-| Student12      	| student15                         	| AzureTraining$ 	|
-| Student13      	| student16                         	| AzureTraining$ 	|
-| Student14      	| azstudent1                        	| AzureTraining$ 	|
+| Student Name             | student#@innovationinsoftware.com | Password       |
+| ------------------------ | --------------------------------- | -------------- |
+| AB Apithy                | student1                          | IstioTraining$ |
+| Aniket Beedikar          | student2                          | IstioTraining$ |
+| David Bradee             | student3                          | IstioTraining$ |
+| Michael Curtis           | student5                          | IstioTraining$ |
+| Krishna Gali Vasu Chinna | student6                          | IstioTraining$ |
+| Chaitanya Garikpaty      | student7                          | IstioTraining$ |
+| Eric Gross               | student8                          | IstioTraining$ |
+| Mickey Highberg          | student9                          | IstioTraining$ |
+| Catherine Knutson        | student10                         | IstioTraining$ |
+| Ning Lei                 | student11                         | IstioTraining$ |
+| Madhu Lingam             | student12                         | IstioTraining$ |
+| Noel Marcelino           | student16                         | AzureTraining$ |
+| Austin Pasker            | azstudent1                        | AzureTraining$ |
+| OPEN                     |                                   | AzureTraining$ |
 
 
 Once logged into the portal, open the cloud shell by clicking the icon to the right of the search bar.
@@ -42,20 +42,20 @@ Log in to the control node
 
 | Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
 |----------------	|----------------	|-----------------	|----------------	|
-| Student1       	| 54.215.233.207  	| 54.176.171.27   	| 13.57.253.28 	    |
-| Student2       	| 54.193.250.48  	| 54.153.87.135    	| 54.183.225.102  	|
-| Student3       	| 54.151.19.99  	| 54.241.144.167  	| 54.177.61.125   	|
-| Student4       	| 54.215.195.230    | 54.183.161.73    	| 54.176.41.15  	|
-| Student5       	| 54.67.94.175  	| 50.18.231.115    	| 54.153.82.82  	|
-| Student6       	| 52.53.149.43  	| 13.52.243.222  	| 54.153.28.18  	|
-| Student7       	| 54.153.2.102 	    | 54.67.71.196 	    | 18.144.170.10  	|
-| Student8       	| 54.219.125.131   	| 54.183.182.130    | 13.56.213.116  	|
-| Student9       	| 3.101.21.236 	    | 54.215.242.149  	| 54.153.105.27  	|
-| Student10      	| 54.153.43.12 	    | 52.53.151.127    	| 54.215.235.241  	|
-| Student11      	| 52.53.235.223  	| 54.177.221.50   	| 13.52.103.225   	|
-| Student12      	| 54.177.152.183   	| 54.215.86.42    	| 52.53.151.86  	|
-| Student13      	| 3.101.42.55 	    | 54.177.200.222  	| 54.241.100.224    |
-| Student14      	| 54.183.186.180  	| 54.176.10.32  	| 54.241.217.145 	|
+| AB Apithy | 18.144.8.56 | 50.18.6.248 | 54.153.49.131 |
+| Aniket Beedikar | 13.52.242.140 | 54.177.24.241 | 54.153.64.212 |
+| David Bradee | 54.67.53.93 | 18.144.81.99 | 54.241.95.202 |
+| Michael Curtis | 54.67.121.198 | 18.144.81.76 | 18.144.8.226 |
+| Krishna Gali Vasu Chinna | 54.151.116.64 | 54.177.34.58 | 52.53.237.15 |
+| Chaitanya Garikpaty | 13.57.30.70 | 54.176.213.194 | 54.153.66.38 |
+| Eric Gross | 18.144.164.74 | 54.177.34.80 | 50.18.150.174 |
+| Mickey Highberg | 13.57.206.133 | 3.101.150.38 | 54.193.51.10 |
+| Catherine Knutson | 13.52.231.154 | 54.153.83.87 | 54.183.6.7 |
+| Ning Lei | 184.169.221.24 | 54.153.109.119 | 13.57.252.178 |
+| Madhu Lingam | 52.53.153.13 | 13.52.216.205 | 52.53.201.254 |
+| Noel Marcelino | 54.177.62.80 | 13.52.245.58 | 54.153.3.250 |
+| Austin Pasker | 54.153.77.107 | 52.53.151.160 | 54.177.65.35 |
+| Instructor | 204.236.139.154 | 52.53.198.20 | 52.53.164.210 |
 
 The username for SSH is `ubuntu`   
 
