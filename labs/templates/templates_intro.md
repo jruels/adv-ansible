@@ -28,13 +28,11 @@ vim hardened.j2
 Now that we're in Vim, we'll put these contents in the file:
 
 ```
-{% raw %}
-%sysops {{ ansible_default_ipv4.address }} = (ALL) ALL
-Host_Alias WEBSERVERS = {{ groups['web']|join(' ') }}
-Host_Alias DBSERVERS = {{ groups['database']|join(' ') }}
+%sysops {% raw %} {{ ansible_default_ipv4.address }} {% raw %} = (ALL) ALL
+Host_Alias WEBSERVERS = {% raw %} {{ groups['web']|join(' ') }} {% raw %}
+Host_Alias DBSERVERS = {% raw %} {{ groups['database']|join(' ') }} {% raw %}
 %httpd WEBSERVERS = /bin/su - webuser
 %dba DBSERVERS = /bin/su - dbuser
-{% endraw %}
 ```
 
 ## Create an inventory file
