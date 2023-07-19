@@ -101,11 +101,11 @@ The `security.yml` file should look like this:
 - hosts: all
   become: yes
   tasks:
-  - name: deploy sudo template
-    template:
-      src: hardened.j2
-      dest: /etc/sudoers.d/hardened
-      validate: /sbin/visudo -cf %s
+    - name: deploy sudo template
+      template:
+        src: hardened.j2
+        dest: /etc/sudoers.d/hardened
+        validate: /sbin/visudo -cf %s
 ```
 
 ## Run the Playbook
