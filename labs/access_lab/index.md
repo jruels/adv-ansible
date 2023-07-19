@@ -34,11 +34,7 @@ Clone the GitHub repository to the Azure Shell
 git clone https://github.com/jruels/adv-ansible.git
 ```
 
-Set permissions on the SSH key 
-```
-chmod 600 adv-ansible/keys/lab.pem 
-```
-Log in to the control node 
+Log in to all three nodes
 
 | Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
 |----------------	|----------------	|-----------------	|----------------	|
@@ -57,18 +53,31 @@ Log in to the control node
 | Austin Pasker | 54.153.77.107 | 52.53.151.160 | 54.177.65.35 |
 | Instructor | 204.236.139.154 | 52.53.198.20 | 52.53.164.210 |
 
-The username for SSH is `ubuntu`   
+The username for SSH is `student`   
+
+The password is `Ansible1234$`
 
 ### SSH to lab servers 
 ```
-ssh -i adv-ansible/keys/lab.pem ubuntu@<Control server IP> 
+ssh student@<Server IPs> 
 ```
 
+When prompted, provide the password
+
 ## Configure the `ansible` user on all the nodes
+
+First become the ubuntu user: 
+
+```bash
+sudo su - ubuntu
+```
+
+When prompted, provide the password
 
 Next, we'll add a new `ansible` user to each node. This user will be used for running `ansible` tasks. 
 
 On each node run:
+
 ```
 sudo useradd -m -s /bin/bash ansible
 ```
