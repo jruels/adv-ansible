@@ -103,7 +103,25 @@ On the Control Node copy the output of:
 cat /home/ansible/.ssh/id_rsa.pub
 ```
 
-Log in to each of the managed nodes, become the `ansible` user, and add the key to the `authorized_keys` file.
+## Log into the managed nodes 
+
+Log in to each of the managed nodes: 
+
+```
+ssh student@<Server IPs> 
+```
+
+When prompted, provide the password
+
+become the ubuntu user: 
+
+```bash
+sudo su - ubuntu
+```
+
+When prompted, provide the password
+
+become the `ansible` user, and add the key to the `authorized_keys` file.
 
 
 Become the `ansible` user:
@@ -130,17 +148,33 @@ Set the correct permissions
 chmod 600 /home/ansible/.ssh/authorized_keys
 ```
 
-Confirm you can ssh as the `ansible` user from the control node to the managed nodes
+Confirm you can ssh as the `ansible` user from the **control node** to the **managed nodes**.
+
+### SSH to control server
 
 ```
-ssh <IP of each node>
+ssh student@<Control Server IPs> 
+```
+
+Become the `ansible` user: 
+
+```bash
+sudo su - ansible 
+```
+
+When prompted, provide the password
+
+SSH as the `ansible` user to each managed node.
+
+```
+ssh ansible@<IP of each managed node>
 ```
 
 
 
 ## Create a Simple Ansible Inventory
 
-Run the following on the CONTROL NODE   
+Run the following on the **CONTROL SERVER**   
 Create and enter a working directory
 
 ```
@@ -165,13 +199,25 @@ echo "node2 ansible_host=<IP of node2>" >> inventory
 
 ## Configure `sudo` Access for Ansible
 
-Now, we'll configure sudo access for Ansible on `node1` and `node2` such that Ansible may use sudo for any command with no password prompt.
+Now, we'll configure sudo access for Ansible on `nmanaged node1` and `managed node2` such that Ansible may use `sudo` for any command with no password prompt.
 
-Log in to each node and edit the `sudoers` file to contain appropriate access for the `ansible` user:
+Log in to each managed node as the `student` user and edit the `sudoers` file to contain appropriate access for the `ansible` user:
+
+Log into each **managed server** as the `student` user: 
+
+### SSH to lab servers 
+
+```
+ssh student@<Server IPs> 
+```
+
+When prompted, provide the password
 
 ```
 sudo visudo 
 ```
+
+When prompted, provide the password
 
 Add the following line to the file and save:
 
