@@ -40,7 +40,7 @@ Paste the following code into the new file:
 package_upgrade: true
 runcmd:
   - sudo apt install openjdk-11-jdk -y
-  - wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+  - wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo apt-key add -
   - sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
   - sudo apt-get update && sudo apt-get install jenkins -y
   - sudo service jenkins restart
@@ -197,10 +197,12 @@ You can also confirm the build was successful by viewing the console output.
 
 * Click the icon on the left of the build job ID
 	
+
 ![](index/jenkins-console%202.jpg)
 
 * The console output will show if the build was successful. 
 	
+
 ![](index/console-success%202.jpg)
 
 
