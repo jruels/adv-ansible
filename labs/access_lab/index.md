@@ -53,28 +53,25 @@ Log in to all three nodes
 | Austin Pasker | 54.153.77.107 | 52.53.151.160 | 54.177.65.35 |
 | Instructor | 204.236.139.154 | 52.53.198.20 | 52.53.164.210 |
 
-The username for SSH is `student`   
-
-The password is `Ansible1234$`
+The username for SSH is `ubuntu`   
 
 ### SSH to lab servers 
-```
-ssh student@<Server IPs> 
+
+Change the key permissions
+
+```bash
+chmod 600 adv-ansible/keys/lab.pe
 ```
 
-When prompted, provide the password
+Confirm you can SSH to all three servers using the SSH key.
+
+```
+ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
+```
 
 ## Configure the `ansible` user on all the nodes
 
-First become the ubuntu user: 
-
-```bash
-sudo su - ubuntu
-```
-
-When prompted, provide the password
-
-Next, we'll add a new `ansible` user to each node. This user will be used for running `ansible` tasks. 
+Add a new `ansible` user to each node. This user will be used for running `ansible` tasks. 
 
 On each node run:
 
@@ -95,9 +92,9 @@ ssh-keygen
 
 
 
-Copy the public key to both nodes provided by the instructor:
+#### Copy the public key to both nodes provided by the instructor:
 
-On the Control Node copy the output of:
+On the Control Node, copy the output of:
 
 ```
 cat /home/ansible/.ssh/id_rsa.pub
@@ -105,21 +102,11 @@ cat /home/ansible/.ssh/id_rsa.pub
 
 ## Log into the managed nodes 
 
-Log in to each of the managed nodes: 
+From the Azure portal, log in to each of the managed nodes: 
 
 ```
-ssh student@<Server IPs> 
+ssh -i adv-ansible/keys/lab.pem@<Server IPs> 
 ```
-
-When prompted, provide the password
-
-become the ubuntu user: 
-
-```bash
-sudo su - ubuntu
-```
-
-When prompted, provide the password
 
 become the `ansible` user, and add the key to the `authorized_keys` file.
 
@@ -153,7 +140,7 @@ Confirm you can ssh as the `ansible` user from the **control node** to the **man
 ### SSH to control server
 
 ```
-ssh student@<Control Server IPs> 
+ssh -i adv-ansible/keys/lab.pem ubuntu@<Control Server IPs> 
 ```
 
 Become the `ansible` user: 
@@ -161,8 +148,6 @@ Become the `ansible` user:
 ```bash
 sudo su - ansible 
 ```
-
-When prompted, provide the password
 
 SSH as the `ansible` user to each managed node.
 
@@ -199,25 +184,21 @@ echo "node2 ansible_host=<IP of node2>" >> inventory
 
 ## Configure `sudo` Access for Ansible
 
-Now, we'll configure sudo access for Ansible on `nmanaged node1` and `managed node2` such that Ansible may use `sudo` for any command with no password prompt.
+Now, we'll configure sudo access for Ansible on `managed node1` and `managed node2` such that Ansible may use `sudo` for any command with no password prompt.
 
-Log in to each managed node as the `student` user and edit the `sudoers` file to contain appropriate access for the `ansible` user:
+Log in to each managed node as the `ubuntu` user and edit the `sudoers` file to contain appropriate access for the `ansible` user:
 
-Log into each **managed server** as the `student` user: 
+Log into each **managed server** as the `ubuntu` user: 
 
 ### SSH to lab servers 
 
 ```
-ssh student@<Server IPs> 
+ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
 ```
-
-When prompted, provide the password
 
 ```
 sudo visudo 
 ```
-
-When prompted, provide the password
 
 Add the following line to the file and save:
 
