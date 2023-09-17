@@ -59,7 +59,7 @@ Run  `az vm create` to create a virtual machine.
 az vm create \
 --resource-group jenkins-get-started-rg \
 --name jenkins-get-started-vm \
---image UbuntuLTS \
+--image Ubuntu2204 \
 --admin-username "azureuser" \
 --generate-ssh-keys \
 --public-ip-sku Standard \
