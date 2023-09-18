@@ -126,7 +126,7 @@ ssh-keygen
 Now create the `authorized_keys` file and paste the copied output from above into it.
 
 ```
-echo "<copied output from above>" > /home/ansible/.ssh/authorized_keys
+echo "<output from cat command above>" > /home/ansible/.ssh/authorized_keys
 ```
 
 Set the correct permissions

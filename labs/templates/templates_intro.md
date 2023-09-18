@@ -88,6 +88,46 @@ exit
 
 
 
+Exit to the `ubuntu` user, and give the `ansible` user sudo permissions.
+
+## Configure `sudo` Access on the Control node
+
+Now, we'll configure sudo access for Ansible such that Ansible may use `sudo` for any command with no password prompt.
+
+Edit the `sudoers` file to contain appropriate access for the `ansible` user:
+
+```
+sudo visudo 
+```
+
+Add the following line to the file and save:
+
+```
+ansible    ALL=(ALL)       NOPASSWD: ALL 
+```
+
+Enter:
+
+```
+exit
+```
+
+
+
+Confirm you are the `ansible` user. If not, run 
+
+```bash
+sudo su - ansible
+```
+
+After becoming the `ansible` user go back to the lab directory.
+
+```
+cd /home/ansible/lab-template
+```
+
+
+
 ## Create a Playbook
 
 ```
