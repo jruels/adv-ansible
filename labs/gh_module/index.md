@@ -19,16 +19,17 @@ Generate Personal Access Token to authenticate from Ansible to GitHub.
 1. In a browser visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 2. Log in to GitHub if prompted
 3. Click "Generate new token"
-  1. Name token
-  2. Select "repo" and "delete_repo" scopes
-4. At the bottom of page click "Generate token"
-Make sure you save your token because it will not be shown again.
+4. Select "Classic token"
+  5. Name token
+  6. Select "repo" and "delete_repo" scopes
+7. At the bottom of page, click "Generate token"
+    Make sure you save your token because it will not be shown again.
 
 
 ## Create a custom module 
 Writing an Ansible module is not difficult. Modules can be written in any language, but for this lab we will use Python. 
 
-We'll create a quick little module that can create or delete a repository on github.
+We'll create a quick little module that can create or delete a repository on GitHub.
 
 Let's start with a basic scaffolding to see how a custom module works. 
 
@@ -174,13 +175,14 @@ ansible-playbook play.yml
 
 Ansible recommends adding documentation with examples of using the module. At the top of the module add: 
 ```yml
-DOCUMENTATION = '''
+DOCUMENTATION = r'''
 ---
 module: github_repo
-short_description: Manage your repos on Github
+
+short_description: This module manages GitHub repositories
 '''
 
-EXAMPLES = '''
+EXAMPLES = r'''
 - name: Create a github Repo
   github_repo:
     github_auth_key: "..."
@@ -320,7 +322,7 @@ Here is a sample of what that might look like:
     - github_token: "YOUR TOKEN HERE"
   tasks:
     - name: Create a GitHub Repo
-      gh_repo:
+      github_repo:
         github_auth_key: "{{github_token}}"
         username: "YOUR GITHUB USERNAME HERE"
         name: "Hello-World"
@@ -351,5 +353,4 @@ The above playbook declares the `github_token` variable in plain text. This is n
 Use `ansible-vault` to create an encrypted variable for `github_token`, and update the playbook to use it. 
 
 ## Congrats 
-
 
