@@ -60,7 +60,7 @@ The username for SSH is `ubuntu`
 Change the key permissions
 
 ```bash
-chmod 600 adv-ansible/keys/lab.pe
+chmod 600 adv-ansible/keys/lab.pem
 ```
 
 Confirm you can SSH to all three servers using the SSH key.
@@ -105,7 +105,7 @@ cat /home/ansible/.ssh/id_rsa.pub
 From the Azure portal, log in to each of the managed nodes: 
 
 ```
-ssh -i adv-ansible/keys/lab.pem@<Server IPs> 
+ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
 ```
 
 become the `ansible` user, and add the key to the `authorized_keys` file.
