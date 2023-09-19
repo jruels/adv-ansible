@@ -10,10 +10,9 @@ Slides were emailed to each student.
 [Access Lab](labs/access_lab/)   
 
 ### Day 1      
-Lab 1: [Deploy Jenkins](labs/jenkins-basics/)   
-Lab 2: [Ansible Error Handling](labs/error-handling/)     
+Lab 1: [Ansible Error Handling](labs/error-handling/)     
+Lab 2: [Ansible Templates](labs/templates/)   
 
 ## Day 2   
-Lab 3: [Ansible Templates](labs/templates/)   
-Lab 4: [Ansible Vault](labs/ansible-vault/)   
-Lab 5: [Write a custom module](labs/gh_module/)   
+Lab 3: [Ansible Vault](labs/ansible-vault/)   
+Lab 4: [Write a custom module](labs/gh_module/)   
