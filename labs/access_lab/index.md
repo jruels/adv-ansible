@@ -1,40 +1,31 @@
 # Lab Setup 
-## Azure Portal
-If you have not already, log into the [Azure Portal](https://portal.azure.com) with the credentials provided below. 
+On the provided Windows VM, download the GitHub repository. 
+Go to the [repo](https://github.com/jruels/adv-ansible) in a browser, and in the top right corner, click the green "Code" button, then click "Download as zip". 
+Once the download is done, extract the zip file to somewhere you can easily access it.
 
-| Student Name             | student#@innovationinsoftware.com | Password       |
-| ------------------------ | --------------------------------- | -------------- |
-| AB Apithy                | student1                          | IstioTraining$ |
-| Aniket Beedikar          | student2                          | IstioTraining$ |
-| David Bradee             | student3                          | IstioTraining$ |
-| Michael Curtis           | student5                          | IstioTraining$ |
-| Krishna Gali Vasu Chinna | student6                          | IstioTraining$ |
-| Chaitanya Garikpaty      | student7                          | IstioTraining$ |
-| Eric Gross               | student8                          | IstioTraining$ |
-| Mickey Highberg          | student9                          | IstioTraining$ |
-| Catherine Knutson        | student10                         | IstioTraining$ |
-| Ning Lei                 | student11                         | IstioTraining$ |
-| Madhu Lingam             | student12                         | IstioTraining$ |
-| Noel Marcelino           | student16                         | AzureTraining$ |
-| Austin Pasker            | azstudent1                        | AzureTraining$ |
-| Instructor               | azstudent2                        | AzureTraining$ |
+ ## Set up Putty
+
+Download Putty from [here](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe) and save it to the VM desktop. 
+
+Open Putty and configure a new session for each of the Ansible VMs.
+
+![img](https://www.sqlshack.com/wp-content/uploads/2017/08/word-image-23.png)
 
 
-Once logged into the portal, open the cloud shell by clicking the icon to the right of the search bar.
 
-If prompted, choose `bash` as the shell
+Expand Connection -> SSH -> Auth -> Credentials, click "Browse", and then choose the `lab.ppk` file from the `adv-ansible/keys` directory
 
-Clean up any leftover files
-```
-rm -rf * 
-```
+![image-20230918185300995](../../../../../../../Application Support/typora-user-images/image-20230918185300995.png)
 
-Clone the GitHub repository to the Azure Shell 
-```
-git clone https://github.com/jruels/adv-ansible.git
-```
 
-Log in to all three nodes
+
+Remember to save your session. 
+
+## Log into each node
+
+Confirm you can connect to each Ansible VM assigned to you below using Putty.
+
+The username for SSH is `ubuntu` 
 
 | Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
 |----------------	|----------------	|-----------------	|----------------	|
@@ -53,21 +44,7 @@ Log in to all three nodes
 | Austin Pasker | 54.153.77.107 | 52.53.151.160 | 54.177.65.35 |
 | Instructor | 204.236.139.154 | 52.53.198.20 | 52.53.164.210 |
 
-The username for SSH is `ubuntu`   
 
-### SSH to lab servers 
-
-Change the key permissions
-
-```bash
-chmod 600 adv-ansible/keys/lab.pem
-```
-
-Confirm you can SSH to all three servers using the SSH key.
-
-```
-ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
-```
 
 ## Configure the `ansible` user on all the nodes
 
@@ -102,13 +79,7 @@ cat /home/ansible/.ssh/id_rsa.pub
 
 ## Log into the managed nodes 
 
-From the Azure portal, log in to each of the managed nodes: 
-
-```
-ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
-```
-
-become the `ansible` user, and add the key to the `authorized_keys` file.
+Using Putty, log in to each of the managed nodes: 
 
 
 Become the `ansible` user:
