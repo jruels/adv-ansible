@@ -60,7 +60,27 @@ On each node run:
 sudo useradd -m -s /bin/bash ansible
 ```
 
-Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
+
+
+## Configure `sudo` Access for the ansible user
+
+Now, we'll configure sudo access for Ansible on `managed node1` and `managed node2` such that Ansible may use `sudo` for any command with no password prompt.
+
+```
+sudo visudo 
+```
+
+Add the following line to the file and save:
+
+```
+ansible    ALL=(ALL)       NOPASSWD: ALL 
+```
+
+
+
+## Configure SSH for ansible user
+
+Configure the `ansible` user on the control node for SSH shared key access to the managed nodes.
 
 **Note:** Do not use a passphrase for the key pair.
 
@@ -110,25 +130,9 @@ Set the correct permissions
 chmod 600 /home/ansible/.ssh/authorized_keys
 ```
 
+## Connect from control node to managed nodes
+
 Confirm you can ssh as the `ansible` user from the **control node** to the **managed nodes**.
-
-### SSH to control server
-
-```
-ssh -i adv-ansible/keys/lab.pem ubuntu@<Control Server IPs> 
-```
-
-Become the `ansible` user: 
-
-```bash
-sudo su - ansible 
-```
-
-SSH as the `ansible` user to each managed node.
-
-```
-ssh ansible@<IP of each managed node>
-```
 
 
 
@@ -156,36 +160,6 @@ echo "node2 ansible_host=<IP of node2>" >> inventory
 ```
 
 
-
-## Configure `sudo` Access for Ansible
-
-Now, we'll configure sudo access for Ansible on `managed node1` and `managed node2` such that Ansible may use `sudo` for any command with no password prompt.
-
-Log in to each managed node as the `ubuntu` user and edit the `sudoers` file to contain appropriate access for the `ansible` user:
-
-Log into each **managed server** as the `ubuntu` user: 
-
-### SSH to lab servers 
-
-```
-ssh -i adv-ansible/keys/lab.pem ubuntu@<Server IPs> 
-```
-
-```
-sudo visudo 
-```
-
-Add the following line to the file and save:
-
-```
-ansible    ALL=(ALL)       NOPASSWD: ALL 
-```
-
-Enter:
-
-```
-exit
-```
 
 ## Verify Each Managed Node Is Accessible
 
