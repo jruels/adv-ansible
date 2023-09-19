@@ -3,19 +3,21 @@ On the provided Windows VM, download the GitHub repository.
 Go to the [repo](https://github.com/jruels/adv-ansible) in a browser, and in the top right corner, click the green "Code" button, then click "Download as zip". 
 Once the download is done, extract the zip file to somewhere you can easily access it.
 
- ## Set up Putty
+
+
+## Set up Putty
 
 Download Putty from [here](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe) and save it to the VM desktop. 
 
 Open Putty and configure a new session for each of the Ansible VMs.
 
-![img](https://www.sqlshack.com/wp-content/uploads/2017/08/word-image-23.png)
+![img](images/putty-session.png)
 
 
 
 Expand Connection -> SSH -> Auth -> Credentials, click "Browse", and then choose the `lab.ppk` file from the `adv-ansible/keys` directory
 
-![image-20230918185300995](../../../../../../../Application Support/typora-user-images/image-20230918185300995.png)
+![image-20230918185300995](images/putty-auth.png)
 
 
 
