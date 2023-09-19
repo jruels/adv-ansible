@@ -39,7 +39,7 @@ Use `ansible-vault` to encrypt `/home/ansible/adv-ansible/labs/ansible-vault/con
 Run 
 ```
 ansible-vault encrypt /home/ansible/adv-ansible/labs/ansible-vault/conf/confidential
-``` 
+```
 and supply the password "I love ansible".
 
 ### Create a playbook that deploys httpd on webservers
@@ -78,6 +78,16 @@ Configure `webserver.yml` to deploy the templates `/home/ansible/adv-ansible/lab
 Add the following text to `webserver.yml` just **before** the handler section:
 
 ```yaml
+    - name: create apache config directory
+      file:
+         path: "/etc/httpd/conf.d"
+         state: directory
+         mode: '0755'
+    - name: create another directory
+      file:
+         path: "/etc/httpd/conf"
+         state: directory
+         mode: '0755'
     - name: configure virtual host
       template:
         src: /home/ansible/adv-ansible/labs/ansible-vault/conf/vhost.conf.j2
