@@ -33,13 +33,18 @@ We'll create a quick little module that can create or delete a repository on Git
 
 Let's start with a basic scaffolding to see how a custom module works. 
 
-Create the following file structure: 
+Create a lab directory and enter it: 
 
 ```
-play.yml
-[library]
-  |_ github_repo.py
+mkdir /home/ansible/ansible_module && cd /home/ansible/ansible_module
 ```
+
+Inside the lab directory, create the following: 
+
+* A sub-directory named `library`
+* A blank playbook named `play.yml`
+
+Inside the `library` directory, create a file named `github_repo.py`
 
 The custom module lives in the `library` directory and has the name we will be calling from our playbook `github_repo`. 
 
