@@ -31,22 +31,47 @@ The username for SSH is `ubuntu`
 
 | Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
 |----------------	|----------------	|-----------------	|----------------	|
-| Student1 | 54.67.82.194 | 54.215.55.191 | 52.53.163.193 |
-| Student2 | 54.183.223.188 | 54.153.84.43 | 54.176.68.65 |
-| Student3 | 54.193.102.65 | 54.177.226.147 | 54.193.68.71 |
-| Student4 | 54.67.115.13 | 54.153.61.95 | 13.52.61.120 |
-| Student5 | 54.219.191.130 | 54.176.121.102 | 3.101.36.31 |
-| Student6 | 54.215.250.45 | 13.52.215.182 | 54.177.111.123 |
-| Student7 | 13.52.97.166 | 13.52.186.215 | 54.183.26.120 |
-| Student8 | 54.153.102.154 | 54.219.137.95 | 18.144.87.1 |
-| Student9 | 3.101.19.248 | 54.183.65.252 | 54.177.148.222 |
-| Student10 | 13.52.214.88 | 3.101.59.27 | 52.53.230.219 |
-| Student11 | 13.57.34.192 | 50.18.140.234 | 54.153.116.128 |
-| Student12 | 54.183.243.177 | 54.183.196.143 | 52.53.158.95 |
-| Student13 | 54.176.36.82 | 52.53.215.40 | 54.67.7.122 |
-| Student14      | 54.183.106.160 | 54.219.141.221 | 54.153.123.62  |
-| Student15 | 13.52.239.242 | 13.52.243.214 | 54.153.5.186 |
-| Instructor | 54.151.12.143  | 54.219.241.65  | 54.193.102.228 |
+| Student1 | 18.144.42.142 | 3.101.28.106 | 52.53.183.233 |
+| Student2 | 54.183.223.188 | 3.101.73.176 | 54.177.213.182 |
+| Student3 | 13.57.51.66 | 54.219.145.131 | 13.56.81.124 |
+| Student4 | 54.183.66.155 | 54.183.121.204 | 54.215.253.172 |
+| Student5 | 54.219.113.163 | 54.183.76.130 | 54.215.69.35 |
+| Student6 | 13.57.51.193 | 54.183.232.72 | 13.57.234.199 |
+| Student7 | 13.56.13.97 | 3.101.134.233 | 54.193.109.230 |
+| Student8 | 54.215.102.1 | 54.215.65.42 | 13.57.217.70 |
+| Student9 | 13.56.11.127 | 54.176.135.201 | 54.176.103.180 |
+
+
+
+## Install Ansible on all the nodes
+
+On each node, install Ansible using pip
+
+```bash
+sudo pip3 install ansible
+```
+
+Confirm ansible was installed successfully. 
+
+```bash
+ansible --version
+```
+
+You should see output similar to
+
+```
+ansible [core 2.13.13]
+  config file = None
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ubuntu/.local/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ubuntu/.local/bin/ansible
+  python version = 3.8.10 (default, Nov 22 2023, 10:22:35) [GCC 9.4.0]
+  jinja version = 3.1.3
+  libyaml = True
+```
+
+
 
 
 
