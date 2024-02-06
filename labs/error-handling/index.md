@@ -16,7 +16,39 @@ Task list:
 
 After confirming the playbook successfully downloads and updates the `transaction_list` file, clone the lab directory and run the `break_stuff.yml` playbook in the `maint` directory to simulate an unreachable host. 
 
+## Configure `sudo` Access on the Control node
+
+Now, we'll configure sudo access for Ansible such that Ansible may use `sudo` for any command with no password prompt.
+
+Edit the `sudoers` file to contain appropriate access for the `ansible` user:
+
+**NOTE**: You must be the `ubuntu` user to run the following step.
+
 ```
+sudo visudo 
+```
+
+Add the following line to the file and save:
+
+```
+ansible    ALL=(ALL)       NOPASSWD: ALL 
+```
+
+Enter:
+
+```
+exit
+```
+
+After granting sudoers, become the `ansible` user
+
+```bash
+sudo su - ansible
+```
+
+
+
+```shell
 cd ~ && git clone https://github.com/jruels/adv-ansible.git
 ```
 
