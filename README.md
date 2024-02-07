@@ -15,4 +15,5 @@ Lab 2: [Ansible Templates](labs/templates/)
 
 ## Day 2   
 Lab 3: [Ansible Vault](labs/ansible-vault/)   
-Lab 4: [Write a custom module](labs/gh_module/)   
+Lab 4: [Ansible Roles](labs/ansible-roles/)   
+Lab 5: [Write a custom module](labs/gh_module/)   
