@@ -11,8 +11,8 @@ Task list:
 * Configure the role to deploy `motd.j2` to /etc/motd on all nodes.
 * Configure the role to install the latest Docker client
   * The Docker GPG key, and  repository is required
-    * apt_key: https://download.docker.com/linux/ubuntu/gpg
-    * repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    * apt_key: `https://download.docker.com/linux/ubuntu/gpg`
+    * repo: `deb https://download.docker.com/linux/ubuntu focal stable`
   * The Docker packages are named `docker-ce, docker-ce-cli`
 
 * Configure the role to add an entry to `/etc/hosts` on the Docker server with: 
@@ -20,7 +20,7 @@ Task list:
 * Configure the role to create the `noc` user and deploy the provided public key on all nodes.
 * Edit `web.yml` to deploy the new `baseline` role
 * Create an inventory file that includes:
-  * a `webservers` group with both nodes.
+  * a `webservers` group with both managed nodes.
 
 
 ## Congrats!
