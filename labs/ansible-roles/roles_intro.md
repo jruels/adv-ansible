@@ -51,7 +51,7 @@ mkdir roles
 
 1. Copy the file:
 
-   `cp /home/ansible/adv-ansible/labs/roles/resources/motd.j2 baseline/templates `
+   `cp /home/ansible/adv-ansible/labs/ansible-roles/resources/motd.j2 baseline/templates `
 
 2. Create a file called `deploy_motd.yml`:
 
@@ -123,7 +123,7 @@ mkdir roles
 
 1. Copy the provided `authorized_keys` file to our `files` directory:
 
-   `cp /home/ansible/adv-ansible/labs/roles/resources/authorized_keys baseline/files/ `
+   `cp /home/ansible/adv-ansible/labs/ansible-roles/resources/authorized_keys baseline/files/ `
 
 2. Create a file called `deploy_noc_user.yml`:
 
@@ -171,7 +171,7 @@ Save and exit with **Escape** followed by `:wq`.
 
 1. Copy `web.yml` to the lab directory:
 
-   `cp /home/ansible/adv-ansible/labs/roles/resources/web.yml /home/ansible/lab-roles/ `
+   `cp /home/ansible/adv-ansible/labs/ansible-roles/resources/web.yml /home/ansible/lab-roles/ `
 
 2. Open `web.yml`:
 
