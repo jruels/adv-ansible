@@ -1,7 +1,7 @@
 # Lab Setup 
 On the provided Windows VM, download the GitHub repository. 
 Go to the [repo](https://github.com/jruels/adv-ansible) in a browser, and in the top right corner, click the green "Code" button, then click "Download as zip". 
-Once the download is done, extract the zip file to somewhere you can easily access it.
+Once the download is done, extract the zip file and put it somewhere you can easily access it.
 
 
 
@@ -29,21 +29,21 @@ Confirm you can connect to each Ansible VM assigned to you below using Putty.
 
 The username for SSH is `ubuntu` 
 
-| Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	|
-|----------------	|----------------	|-----------------	|----------------	|
-| Student1 | 13.56.236.26   | 54.193.123.145 | 54.151.85.214   |
-| Student2 | 54.219.77.46   | 54.219.184.31  | 54.183.76.165   |
-| Student3 | 18.144.14.35   | 54.183.134.218 | 54.241.69.37    |
-| Student4 | 13.56.251.18   | 54.151.10.144  | 3.101.58.127    |
-| Student5 | 54.183.123.123 | 54.219.13.144  | 54.183.168.114  |
-| Student6 | 54.219.161.75  | 54.193.134.35  | 18.144.58.132   |
-| Student7 | 184.72.13.79   | 18.144.18.247  | 13.57.195.109   |
-| Student8 | 54.215.49.87   | 54.183.217.23  | 54.219.178.39   |
-| Student9 | 3.101.117.199  | 13.57.185.1    | 54.183.237.67   |
-| Student10 | 54.177.253.64 | 54.193.111.22 | 52.53.252.179 |
-| Student11 | 13.57.193.0 | 54.219.129.40 | 204.236.140.221 |
-| Student12 | 18.144.68.19 | 50.18.227.200 | 54.151.8.187 |
-| Student13 | 54.176.44.206 | 54.219.183.239 | 54.151.107.100 |
+| Student Number 	| Control server 	| Managed Node1   	| Managed Node2  	| Win VM |
+|----------------	|----------------	|-----------------	|----------------	|----------------	|
+| Student1 | 13.56.236.26   | 54.193.123.145 | 54.151.85.214   | PTACCESS180 |
+| Student2 | 54.219.77.46   | 54.219.184.31  | 54.183.76.165   | PTACCESS181 |
+| Student3 | 18.144.14.35   | 54.183.134.218 | 54.241.69.37    | PTACCESS182 |
+| Student4 | 13.56.251.18   | 54.151.10.144  | 3.101.58.127    | PTACCESS183 |
+| Student5 | 54.183.123.123 | 54.219.13.144  | 54.183.168.114  | PTACCESS184 |
+| Student6 | 54.219.161.75  | 54.193.134.35  | 18.144.58.132   | PTACCESS185 |
+| Student7 | 184.72.13.79   | 18.144.18.247  | 13.57.195.109   | PTACCESS186 |
+| Student8 | 54.215.49.87   | 54.183.217.23  | 54.219.178.39   | PTACCESS187 |
+| Student9 | 3.101.117.199  | 13.57.185.1    | 54.183.237.67   | PTACCESS188 |
+| Student10 | 54.177.253.64 | 54.193.111.22 | 52.53.252.179 | PTACCESS189 |
+| Student11 | 13.57.193.0 | 54.219.129.40 | 204.236.140.221 | PTACCESS190 |
+| Student12 | 18.144.68.19 | 50.18.227.200 | 54.151.8.187 | PTACCESS191 |
+| Student13 | 54.176.44.206 | 54.219.183.239 | 54.151.107.100 | PTACCESS192 |
 
 
 
